@@ -95,7 +95,7 @@ SELECT
     i.inventory_id,
     i.store_id,
     CASE 
-        WHEN r.rental_id IS NULL THEN 'Available'
+        WHEN r.rental_date IS NULL THEN 'Available'
         ELSE 'Rented'
     END AS availability
 FROM 
